@@ -9,8 +9,8 @@ const app = new cdk.App();
 const webAcl = new WebAclStack(app, `${PREFIX}-WebAcl`, {
   env: { region: "us-east-1" },
 });
+new cdk.CfnOutput(webAcl, "WebAclArn", { value: webAcl.webAclArn });
 
-RemoteOutputStack.makeOutputWebAclArn(webAcl);
 const remoteOutput = new RemoteOutputStack(app, `${PREFIX}-RemoteOutput`, {
   webAcl,
 });
