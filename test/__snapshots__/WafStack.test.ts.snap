@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Test 1`] = `
+Object {
+  "Resources": Object {
+    "CommonAcl": Object {
+      "Properties": Object {
+        "DefaultAction": Object {
+          "Allow": Object {},
+        },
+        "Description": "CommonAcl",
+        "Name": "CommonAcl",
+        "Rules": Array [
+          Object {
+            "Name": "AWSCommonRule",
+            "OverrideAction": Object {
+              "None": Object {},
+            },
+            "Priority": 0,
+            "Statement": Object {
+              "ManagedRuleGroupStatement": Object {
+                "ExcludedRules": Array [],
+                "Name": "AWSManagedRulesCommonRuleSet",
+                "VendorName": "AWS",
+              },
+            },
+            "VisibilityConfig": Object {
+              "CloudWatchMetricsEnabled": true,
+              "MetricName": "RuleWithAWSManagedRulesMetric",
+              "SampledRequestsEnabled": true,
+            },
+          },
+        ],
+        "Scope": "CLOUDFRONT",
+        "VisibilityConfig": Object {
+          "CloudWatchMetricsEnabled": true,
+          "MetricName": "CommonAclMetric",
+          "SampledRequestsEnabled": true,
+        },
+      },
+      "Type": "AWS::WAFv2::WebACL",
+    },
+  },
+}
+`;
